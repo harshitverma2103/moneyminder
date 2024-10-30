@@ -31,7 +31,7 @@ const Hero = () => {
           alt="dashboard"
           width={1000}
           height={700}
-          className="mt-5 roundedc-xl "
+          className="mt-5 roundedc-xl mb-16"
         />
       </section>
     </div>
