@@ -15,7 +15,7 @@ export default function Page() {
           <div className="max-w-xl lg:max-w-3xl">
             
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl mb-5">
-              Welcome to Money Minder 🦑
+              Welcome to Money Minder💲
             </h1>
             <SignUp />
           </div>
