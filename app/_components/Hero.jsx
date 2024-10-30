@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
+import { useUser } from "@clerk/nextjs";
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
+  const { isSignedIn } = useUser();
+
   return (
     <div>
       <section className="bg-gray-900 text-white flex items-center flex-col">
@@ -17,12 +22,13 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
+              <Link
+                href={isSignedIn ? "/dashboard" : "/sign-in"}
+                passHref
                 className="block w-full rounded border border-blue-400 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                href="/sign-in"
               >
-                Get Started
-              </a>
+                {isSignedIn ? "Go to Dashboard" : "Get Started"}
+              </Link>
             </div>
           </div>
         </div>
@@ -31,7 +37,7 @@ const Hero = () => {
           alt="dashboard"
           width={1000}
           height={700}
-          className="mt-5 roundedc-xl mb-16"
+          className="mt-5 rounded-xl mb-10"
         />
       </section>
     </div>
