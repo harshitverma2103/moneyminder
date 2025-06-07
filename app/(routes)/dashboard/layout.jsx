@@ -1,6 +1,6 @@
 "use client"; // Ensure this is at the top of your component
 import React, { useEffect } from "react";
-import SideNav from "./_component/sidenav";
+import SideNav from "./_component/sideNav";
 import DashboardHeader from "./_component/dashboardHeader";
 import { db } from "../../../utils/dbCofing";
 import { Budgets } from "@/utils/schema";
