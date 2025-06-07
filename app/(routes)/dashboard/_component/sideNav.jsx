@@ -1,6 +1,6 @@
 "use client";
 import { UserButton } from "@clerk/nextjs";
-import { LayoutGrid, PiggyBank, ReceiptCent, ShieldCheck } from "lucide-react";
+import { LayoutGrid, PiggyBank, ReceiptCent, ShieldCheck, BarChart3 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,6 +28,12 @@ const SideNav = () => {
     },
     {
       id: 4,
+      name: "Analytics",
+      icon: BarChart3,
+      path: "/dashboard/analytics",
+    },
+    {
+      id: 5,
       name: "Upgrade",
       icon: ShieldCheck,
       path: "/dashboard/upgrade",
